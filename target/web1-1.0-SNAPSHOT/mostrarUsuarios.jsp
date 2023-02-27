@@ -16,7 +16,7 @@
     <body>
         <h1>Lista de usuarios registrados</h1>
         <%
-            List<Pacientes> listaPacien = (List) request.getSession().getAttribute("listaUsuarios");
+            List<Pacientes> listaPacien = (List) request.getSession().getAttribute("listaPacien");
             int cont = 1;
             for(Pacientes usu : listaPacien){
         %>

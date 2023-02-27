@@ -21,8 +21,8 @@
             <h1>Signos vitales</h1>
         </div>
     
-        <form action="SvUsuario" method="POST">
-            <div class="input-container" name="nombre">
+        <form action="SvPacientes" method="POST">
+            <div class="input-container">
                 <input type="text" name="nombre" id="input" required="">
                 <label for="input" class="label">Nombre del paciente</label>
                 <div class="underline"></div>
@@ -37,12 +37,13 @@
             <div class="container">
                 <textarea name="resumen" for="container" class="paragraph" cols="70" rows="7" placeholder="Resumen de la toma" required></textarea>
             </div>
+            
+            <div class="container">
+                <form action="SvPacientes" method="post"><button type="submit" class="b1"> Enviar </button></form>
+                <form action="SvPacientes" method="get"><button type="submit" class="b2"> Mostrar </button></form>
+            </div>
+            
         </form>
-    
-        <div class="container">
-            <form action="SvUsuario" method="post"><button type="submit" class="b1"> Enviar </button></form>
-            <form action="SvUsuario" method="get"><button type="submit" class="b2"> Mostrar </button></form>
-        </div>
     
     </body>
 </html>

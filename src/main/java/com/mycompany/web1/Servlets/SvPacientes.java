@@ -12,8 +12,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-@WebServlet(name = "SvUsuario", urlPatterns = {"/SvUsuario"})
-public class SvUsuario extends HttpServlet {
+@WebServlet(name = "SvPacientes", urlPatterns = {"/SvPacientes"})
+public class SvPacientes extends HttpServlet {
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -32,7 +32,7 @@ public class SvUsuario extends HttpServlet {
         HttpSession misesion = request.getSession();
         misesion.setAttribute("listaPacien", listaPacien);
         
-        response.sendRedirect("mostrarUsuarios.jsp");
+        response.sendRedirect("verPacientes.jsp");
         
     }
 

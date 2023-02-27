@@ -1,0 +1,189 @@
+::placeholder {
+    color: #b1b1b1;
+}
+
+/* Fondo de la pagina */
+body {
+    background-color: #ffffff;
+}
+
+/* Centrar la información */
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+/* Contenedor del resumen de información */
+.container .paragraph {
+    text-align: left;
+    font-size: 20px;
+    font-weight: 500;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.4;
+    border: 2px solid #00008a;
+    padding: 10px;
+    border-radius: 10px;
+    outline: none;
+    transition: all 0.2s;
+}
+.container .paragraph:hover {
+    cursor: text;
+    border: 2.5px solid #0084ff;
+    padding: 15px;
+}
+.container .paragraph:focus {
+    cursor: text;
+    border-color:#0084ff;
+    padding: 15px;
+}
+.container .paragraph:valid {
+    border-color:#0084ff;
+    padding: 15px;
+}
+
+/* Formato de la cabecera*/
+.marca {
+    text-align: center;
+    color: #ccc;
+    font-style: italic;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Diseño del titulo */
+h1 {
+    font-size: 64px;
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(270deg, #0084ff, #020070);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Diseño de las cajas de texto */
+.input-container {
+    position: relative;
+    margin: 50px auto;
+    width: 500px;
+    white-space: initial;
+}
+.input-container input[type="text"] {
+    font-size: 26px;
+    font-family: 'Roboto', sans-serif;
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid #00008a;
+    padding: 5px 0;
+    background-color: transparent;
+    outline: none;
+}
+.input-container .label {
+    position: absolute;
+    font-family: 'Roboto', sans-serif;
+    font-size: 26px;
+    top: 0;
+    left: 0;
+    color: #ccc;
+    transition: all 0.3s ease;
+    pointer-events: none;
+}
+.input-container input[type="text"]:focus~.label,
+.input-container input[type="text"]:valid~.label {
+    top: -20px;
+    font-size: 16px;
+    color: #333;
+}
+.input-container .underline {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 100%;
+    background-color: #0084ff;
+    transform: scaleX(0);
+    transition: all 0.3s ease;
+}
+.input-container input[type="text"]:focus~.underline,
+.input-container input[type="text"]:valid~.underline {
+    transform: scaleX(1);
+}
+
+/* Diseño del botón 1*/
+.b1 {
+    --color: #00008a;
+    font-family: 'Roboto', sans-serif;
+    display: inline-block;
+    width: 6em;
+    height: 2.6em;
+    line-height: 2.5em;
+    overflow: hidden;
+    margin: 20px;
+    font-size: 17px;
+    z-index: 1;
+    color: var(--color);
+    border: 2px solid var(--color);
+    border-radius: 6px;
+    position: relative;
+}
+.b1::before {
+    position: absolute;
+    content: "";
+    background: var(--color);
+    width: 150px;
+    height: 200px;
+    z-index: -1;
+    border-radius: 50%;
+}
+.b1:hover {
+    color: white;
+}
+.b1:before {
+    top: 100%;
+    left: 100%;
+    transition: .3s all;
+}
+.b1:hover::before {
+    top: -30px;
+    left: -30px;
+}
+
+/* Diseño del botón 2*/
+.b2 {
+    --color: #0084ff;
+    font-family: 'Roboto', sans-serif;
+    display: inline-block;
+    width: 6em;
+    height: 2.6em;
+    line-height: 2.5em;
+    overflow: hidden;
+    margin: 20px;
+    font-size: 17px;
+    z-index: 1;
+    color: var(--color);
+    border: 2px solid var(--color);
+    border-radius: 6px;
+    position: relative;
+}
+.b2::before {
+    position: absolute;
+    content: "";
+    background: var(--color);
+    width: 150px;
+    height: 200px;
+    z-index: -1;
+    border-radius: 50%;
+}
+.b2:hover {
+    color: white;
+}
+.b2:before {
+    top: 100%;
+    left: 100%;
+    transition: .3s all;
+}
+.b2:hover::before {
+    top: -30px;
+    left: -30px;
+}

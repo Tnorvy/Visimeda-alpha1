@@ -19,13 +19,13 @@
             <p class="marca"><br>Visimeda - Vital signs and medical data</p>
         </header>
         <div class="container">
-            <h2>Pacientes registrados</h2>
+            <h2>Registro exitoso</h2>
         </div>
         <%List<Pacientes> listaPacien = (List) request.getSession().getAttribute("listaPacien");
         int cont = 1;
         for(Pacientes usu : listaPacien){%>
             <div class="text">
-                <p><b>Paciente #<%=cont%>:</b></p>
+                <p><b>Datos Registrados</b></p>
                 <p><i>DNI:</i> <%=usu.getDni()%></p>
                 <p><i>Nombre:</i> <%=usu.getNombre()%></p>
                 <p><i>Resumen:</i> <%=usu.getResumen()%></p>

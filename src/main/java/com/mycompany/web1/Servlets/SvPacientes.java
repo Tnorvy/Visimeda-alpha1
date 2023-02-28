@@ -44,9 +44,15 @@ public class SvPacientes extends HttpServlet {
         String dni = request.getParameter("dni");
         String resumen = request.getParameter("resumen");
         
-        System.out.println("DNI: " + dni);
-        System.out.println("Nombre: " + nombre);
-        System.out.println("Resumen: " + resumen);
+        System.out.println("Datos: " + dni + " " + nombre);
+        
+        List<Pacientes> listaPacien = new ArrayList<>();
+        listaPacien.add(new Pacientes(dni, nombre, resumen));
+        
+        HttpSession misesion = request.getSession();
+        misesion.setAttribute("listaPacien", listaPacien);
+        
+        response.sendRedirect("verRegistro.jsp");
     }
 
     @Override

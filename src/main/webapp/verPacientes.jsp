@@ -11,21 +11,27 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Usuarios</title>
+        <title>Pacientes</title>
+        <link href="styleVerPacientes.css" rel="stylesheet" type="text/css"/>
     </head>
     <body>
-        <h1>Lista de usuarios registrados</h1>
-        <%
-            List<Pacientes> listaPacien = (List) request.getSession().getAttribute("listaPacien");
-            int cont = 1;
-            for(Pacientes usu : listaPacien){
-        %>
-                <p><b>Usuario #<%=cont%>:</b></p>
-                <p>DNI: <%=usu.getDni()%></p>
-                <p>Nombre: <%=usu.getNombre()%></p>
-                <p>Telefono: <%=usu.getResumen()%></p>
-                <p>=================================================<br></p>
-                <% cont++;%>
+        <header>
+            <p class="marca"><br>Visimeda - Vital signs and medical data</p>
+        </header>
+        <div class="container">
+            <h2>Pacientes registrados</h2>
+        </div>
+        <%List<Pacientes> listaPacien = (List) request.getSession().getAttribute("listaPacien");
+        int cont = 1;
+        for(Pacientes usu : listaPacien){%>
+            <div class="text">
+                <p><b>Paciente #<%=cont%>:</b></p>
+                <p><i>DNI:</i> <%=usu.getDni()%></p>
+                <p><i>Nombre:</i> <%=usu.getNombre()%></p>
+                <p><i>Resumen:</i> <%=usu.getResumen()%></p>
+            </div>
+            <% cont++;%>
         <% } %>
+        <div class="container"><form><input type="button" value="Volver" class="b1" onclick="history.back()" /> </form></div>
     </body>
 </html>

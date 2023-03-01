@@ -28,6 +28,7 @@ public class SvPacientes extends HttpServlet {
         listaPacien.add(new Pacientes("123", "Luisina", "4444"));
         listaPacien.add(new Pacientes("123", "Luisina", "4444"));
         listaPacien.add(new Pacientes("123", "Luisina", "4444"));
+        listaPacien.add(new Pacientes("777", "Ferxxo", "4444"));
         
         HttpSession misesion = request.getSession();
         misesion.setAttribute("listaPacien", listaPacien);
